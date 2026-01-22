@@ -1,4 +1,6 @@
 # Práctica de Python, Flask y Gunicorn
+¡Importante, es posible que tengas que provisionar varias veces e incluso reiniciar la máquina virtual para que funcione correctamente (por problemas con los comandos 😓 a pesar de que funcione al final)!
+
 ## Instalación de Python PIP
 Instalamos **python3-pip**, y luego instalamos con ese paquete **pipenv**
 <br>
@@ -81,3 +83,20 @@ Clonamos [éste](https://github.com/Azure-Samples/msdocs-python-flask-webapp-qui
 Función gráfica
 <br>
 ![Imagen de tarea vista gráfica con Gunicorn](./img/016.png)
+
+### Lanzamiento desde el servicio
+flask_app_tarea.service (archivo del servicio)
+<br>
+![Imagen de tarea archivo del servicio](./img/017.png)
+
+tarea.conf (archivo de configuración de Nginx)
+<br>
+![Imagen de tarea archivo de Nginx](./img/018.png)
+
+Comandos seguidos
+<br>
+![Imagen de tarea comandos](./img/019.png)
+
+Prueba gráfica
+<br>
+![Imagen de tarea comandos](./img/020.png)
