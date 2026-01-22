@@ -32,3 +32,16 @@ Application.py
 Wsgi.py
 <br>
 ![Imagen de wsgi.py](./img/007.png)
+
+## Comprobación de funcionamiento
+¡Nota, vagrant tiene configurado que el puerto del hoster es :8080, tampoco se pueden mantener abiertas (con estos comandos) y son omitidas de la provision!
+<br>
+Probamos que funciona con:
+
+Flask (con el comando **flask run --host '0.0.0.0'**)
+<br>
+![Imagen de funciona con Flask](./img/008.png)
+
+Gunicorn (con el comando **gunicorn --workers 4 --bind 0.0.0.0:5000 wsgi:app**)
+<br>
+![Imagen de funciona con Gunicorn](./img/009.png)
