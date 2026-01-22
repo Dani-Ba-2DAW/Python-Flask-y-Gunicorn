@@ -11,4 +11,9 @@ cp /vagrant/config/.env /var/www/app
 
 sudo chown -R $USER:www-data /var/www/app
 sudo chmod -R 775 /var/www/app
-pipenv shell
+
+cd /var/www/app
+pipenv run pip install flask gunicorn
+pipenv run cat /vagrant/config/application.py > application.py
+pipenv run cat /vagrant/config/wsgi.py > wsgi.py
+exit

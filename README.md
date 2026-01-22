@@ -17,3 +17,18 @@ Configuramos el entorno virtual con el archivo .env, que debe quedar así
 Y lanzamos el entorna virtual con **pipenv shell**
 <br>
 ![Imagen de lanzamiento de entorno virtual](./img/004.png)
+
+## Flask, Gunicorn y archivos de la app
+Instalamos **Flask** y **Gunicorn**, y creamos los archivos **application.py** (la app en sí) y **wsgi.py** (para iniciarla y se quede corriendo)
+<br>
+¡Nota, se ha usado **pipenv run** y **cat** para crear los archivos para provisionarlos sin problemas de permisos y porque vagrant no soporta pipenv shell en la provisión!
+<br>
+![Imagen de comandos archivos de la app](./img/005.png)
+
+Application.py
+<br>
+![Imagen de application.py](./img/006.png)
+
+Wsgi.py
+<br>
+![Imagen de wsgi.py](./img/007.png)
