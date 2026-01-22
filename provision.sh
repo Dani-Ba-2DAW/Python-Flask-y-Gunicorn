@@ -23,4 +23,7 @@ sudo systemctl daemon-reload
 sudo service flask_app enable
 sudo service flask_app start
 
-sudo service nginx start
+sudo cp /vagrant/config/app.conf /etc/nginx/sites-available
+sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled
+
+sudo service nginx restart

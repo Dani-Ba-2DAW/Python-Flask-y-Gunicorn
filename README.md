@@ -58,3 +58,17 @@ Para lanzarlo, primero recargamos los servicios con **sudo systemctl daemon-relo
 Luego activamos y comprobamos que el servicio funciona correctamente con **sudo service flask_app [action]**
 <br>
 ![Imagen de servicio flask_app lanzado](./img/011.png)
+
+## Configuración de Nginx para ver la app en funcionamiento
+Creamos el archivo **app.conf** en **/etc/nginx/sites-available**, hacer el link en **sites-enabled** con **sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled** y tiene que quedar algo así
+<br>
+![Imagen de configuración de Nginx](./img/012.png)
+
+### App lanzada
+¡Nota, se requiere resolver los nombres, en nuestro caso vamos a usar el archivo **C:\Windows\System32\drivers\etc\hosts** (**/etc/hosts** en Linux)!
+<br>
+![Imagen de archivo hosts](./img/013.png)
+
+La app nos quedará así (si has hecho personalmente la provisión, intenta acceder a [http://app.izv](http://app.izv))
+<br>
+![Imagen de app final](./img/014.png)
