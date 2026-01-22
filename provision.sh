@@ -26,4 +26,11 @@ sudo service flask_app start
 sudo cp /vagrant/config/app.conf /etc/nginx/sites-available
 sudo ln -s /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled
 
+cd /var/www
+sudo git clone https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart
+sudo chown -R $USER:www-data msdocs-python-flask-webapp-quickstart
+sudo chmod -R 775 msdocs-python-flask-webapp-quickstart
+cd msdocs-python-flask-webapp-quickstart
+pipenv install -r requirements.txt
+
 sudo service nginx restart

@@ -72,3 +72,12 @@ Creamos el archivo **app.conf** en **/etc/nginx/sites-available**, hacer el link
 La app nos quedará así (si has hecho personalmente la provisión, intenta acceder a [http://app.izv](http://app.izv))
 <br>
 ![Imagen de app final](./img/014.png)
+
+## Tarea
+Clonamos [éste](https://github.com/Azure-Samples/msdocs-python-flask-webapp-quickstart) repositorio, ajustamos los permisos y lo lanzamos con **gunicorn --workers 4 --bind 0.0.0.0:5000 app:app**
+<br>
+![Imagen de tarea clonado de GitHub](./img/015.png)
+
+Función gráfica
+<br>
+![Imagen de tarea vista gráfica con Gunicorn](./img/016.png)
