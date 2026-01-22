@@ -45,3 +45,16 @@ Flask (con el comando **flask run --host '0.0.0.0'**)
 Gunicorn (con el comando **gunicorn --workers 4 --bind 0.0.0.0:5000 wsgi:app**)
 <br>
 ![Imagen de funciona con Gunicorn](./img/009.png)
+
+## Creación y ejecución de un servicio para Gunicorn
+¡Nota, en el extremo caso de que alguna ruta de Gunicorn cambie, reemplaza las rutas por la que te dé con el comando **which gunicorn** EN el entorno virtual de **pipenv**!
+<br>
+Creamos el archivo **flask_app.service** en **/etc/systemd/system**
+<br>
+![Imagen de flask_app.service](./img/010.png)
+
+Para lanzarlo, primero recargamos los servicios con **sudo systemctl daemon-reload**
+<br>
+Luego activamos y comprobamos que el servicio funciona correctamente con **sudo service flask_app [action]**
+<br>
+![Imagen de servicio flask_app lanzado](./img/011.png)
